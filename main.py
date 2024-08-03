@@ -20,8 +20,8 @@ sign_in_button.click()
 email_field = driver.find_element(By.ID, 'username')
 password_field = driver.find_element(By.ID, 'password')
 
-email_field.send_keys("halidmohamed807@gmail.com")
-password_field.send_keys("Haha123@&$", Keys.RETURN)
+email_field.send_keys("Your Email/username")
+password_field.send_keys("Your own password", Keys.RETURN)
 time.sleep(60)
 
 job_listings = driver.find_elements(By.CLASS_NAME, 'jobs-search-results__list-item')
@@ -36,7 +36,7 @@ for job in job_listings:
         time.sleep(2)
 
         mobile_phone_field = driver.find_element(By.CSS_SELECTOR, "[id*='phoneNumber-nationalNumber']")
-        mobile_phone_field.send_keys("0927868821", Keys.RETURN)
+        mobile_phone_field.send_keys("Your Phone Number", Keys.RETURN)
 
         next_button = driver.find_element(By.CSS_SELECTOR, "[aria-label='Continue to next step']")
         next_button.click()
